@@ -29,8 +29,12 @@
             {todo.complete ? 'Complete' : 'In Progress'}
         </span>
     </div>
-    <button type="button" on:click={() => deleteTodo(todo.id)}>
-        <span>Delete todo</span>
+    <button 
+        type="button" 
+        on:click={() => deleteTodo(todo.id)} 
+        class="group ml-4 flex items-center justify-center rounded-md bg-cream-four p-2 hover:bg-steel-one focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-five">
+
+        <span class="sr-only">Delete todo</span>
         <svg
 			class="h-5 w-5 text-steel-three group-hover:text-gray-five"
 			width="32"
