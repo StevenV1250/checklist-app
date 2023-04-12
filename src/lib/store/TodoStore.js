@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
-import { writeable } from 'svelte/store';
+import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 const data = browser ? JSON.parse(window.localStorage.getItem('st-todo-list')) ?? [] : [];
 
-export const todos = writeable(data);
+export const todos = writable(data);
 
 //store used to save and retrieve data
 
